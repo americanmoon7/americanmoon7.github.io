@@ -254,27 +254,25 @@
 <body>
   <div class="container-fluid p-0">
     <!-- Navbar Fijo -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm position-sticky top-0" style="z-index: 1000;">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="img/025.png" alt="Logo AMERICANMOON" class="me-2">
-          <span class="header-text fs-4 fw-bold">AMERICANMOON</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center position-relative" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
-                <i class="fas fa-shopping-cart cart-icon me-2"></i>
-                <span id="cart-count" class="cart-count position-absolute top-50 end-0 translate-middle-y">0</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<!-- Navbar Fijo y Profesional -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm position-sticky top-0" style="z-index: 1000; backdrop-filter: blur(10px); background-color: rgba(20, 20, 20, 0.9);">
+  <div class="container d-flex justify-content-between align-items-center">
+    <!-- Logo y Nombre -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="img/025.png" alt="Logo AMERICANMOON" class="me-2" style="height: 40px; border-radius: 8px;">
+      <span class="header-text fs-5 fw-bold d-none d-md-inline">AMERICANMOON</span>
+      <span class="header-text fs-6 fw-bold d-md-none">AMERICANMOON</span>
+    </a>
+
+    <!-- Carrito siempre visible (fuera del menú) -->
+    <a class="nav-link d-flex align-items-center position-relative" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+      <i class="fas fa-shopping-cart cart-icon me-1 me-md-2" style="font-size: 20px; color: #ff9f31;"></i>
+      <span id="cart-count" class="cart-count position-absolute top-0 end-0 translate-middle badge rounded-circle bg-warning text-dark" style="font-size: 12px; width: 22px; height: 22px; font-weight: bold;">
+        0
+      </span>
+    </a>
+  </div>
+</nav>
 
     <!-- Hero Header -->
     <div class="container mt-4">
@@ -661,4 +659,5 @@ function showProductDetail(product) {
     });
   </script>
 </body>
+
 </html>
